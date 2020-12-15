@@ -4,3 +4,4 @@
 2) Pycharm Project 경로 내에서 Project명/venv/bin 에 진입
 3) source activate
 4) Pycharm Project 내에 manage.py 파일이 있는 곳에서 python3 manage.py runserver 0:8000 실행
+
