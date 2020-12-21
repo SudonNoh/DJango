@@ -46,7 +46,7 @@ DATABASES = {
    - CREATE USER 'USER_ID'@'%' identified by 'PASSWORD'; USER 생성
    - GRANT ALL PRIVILEGES ON DB_NAME.* TO 'USER_ID'@'%'; USER 권한 부여
    - SHOW GRANTS FOR 'USER_ID'@'%'; USER 권한 부여 확인
-   - FLUSH RIVILEGES; USER 권한 부여 확정
+   - FLUSH PRIVILEGES; USER 권한 부여 확정
 4) 'PASSWORD': 
    - 'USER_ID' 를 만들 때 사용한 'PASSWORD'를 입력
 5) 'HOST':
