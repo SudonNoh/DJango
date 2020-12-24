@@ -15,4 +15,3 @@
 
 ## IE 문서 모드란(meta http-equiv="x-ua-compatible" content="IE=edge")
 content="IE=edge"는 IE브라우저에서, 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드
-
