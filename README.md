@@ -26,38 +26,4 @@ content="IE=edge"는 IE브라우저에서, 각 버전 중 가장 최신 표준 �
 7) git log
 8) git push -u origin [branch name]
 
-## 여러 개의 DB를 연동하는 방법
-1) settings.py 파일을 열어 DATABASES = {} 부분을 수정한다.
-
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mariadb',
-        'HOST': 'localhost',
-        'NAME': 'test_db',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'PORT': 3306,
-    },
-    'new_db1': {
-        'ENGINE': 'django.db.backends.mariadb',
-        'HOST': 'localhost',
-        'NAME': 'test_db
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'PORT': 3306,
-    },
-    'new_db2': {
-        'ENGINE': 'django.db.backends.mariadb',
-        'HOST': 'localhost',
-        'NAME': 'test_db',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'PORT': 3306,
-    },
-}
-```
-
-2) DATABASE_ROUTER 를 만들어준다.
-
--
+## 
