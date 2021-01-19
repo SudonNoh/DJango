@@ -15,3 +15,13 @@
 
 ## IE 문서 모드란(meta http-equiv="x-ua-compatible" content="IE=edge")
 content="IE=edge"는 IE브라우저에서, 각 버전 중 가장 최신 표준 모드를 선택하는 문서 모드
+
+## git 사용법
+1) git branch (see branches)
+2) git branch [branch name] (create branch)
+3) git checkout [branch name] (change working dirc to the branch)
+4) git status
+5) git add . or git add [file name]
+6) git commit -m "message"
+7) git log
+8) git push -u origin [branch name]
