@@ -25,6 +25,8 @@ content="IE=edge"는 IE브라우저에서, 각 버전 중 가장 최신 표준 �
 6) git commit -m "message"
 7) git log
 8) git push -u origin [branch name]
+   
+9) git 내용을 가져오고 싶은 경우 git pull origin [branch name]
 
 ## on_delete.CASCADE
 Cat_ID = models.ForeignKey(Catalog_info, on_delete=models.CASCADE, db_column='C_ID')   
