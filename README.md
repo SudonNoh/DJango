@@ -27,5 +27,5 @@ content="IE=edge"는 IE브라우저에서, 각 버전 중 가장 최신 표준 �
 8) git push -u origin [branch name]
 
 ## on_delete.CASCADE
-Cat_ID = models.ForeignKey(Catalog_info, on_delete=models.CASCADE, db_column='C_ID')
+Cat_ID = models.ForeignKey(Catalog_info, on_delete=models.CASCADE, db_column='C_ID')   
 Catalog_info 테이블에서 레코드가 삭제되는 경우 그 레코드에 연결된 Cat_ID 도 
