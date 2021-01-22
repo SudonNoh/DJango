@@ -10,7 +10,7 @@ User의 Field를 관리할 앱을 생성한다.
 ```python
 python manage.py startapp account
 ```
-2) models.py 작성   
+2) models.py 작성  
 User 필드에 추가할 내용을 작성한다.
    
 ```python
@@ -23,7 +23,7 @@ class User(AbstractUser):
   B = models.CharField(max_length=5)
 
 ```
-3) admin.py 작성
+3) admin.py 작성  
 관리자 페이지에서 확인할 내용들을 작성한다.
 ```python
 from django.contrib import admin
@@ -37,7 +37,7 @@ class UserAdmin(admin.ModelAdmin):
   list_display = ('username', 'email', 'A', 'B')
   list_filter = ('username',)
 ```
-4) forms.py 작성
+4) forms.py 작성  
 settings.py 파일이 있는 폴더에 forms.py 파일을 만들어 내용을 작성한다.
 
 ```python
@@ -51,7 +51,7 @@ class CustomUserCreationForm(UserCreationForm):
         models = get_user_model()
         fields = UserCreationForm.Meta.fields
 ```
-5) views.py
+5) views.py  
 settings.py 파일이 있는 폴더에 views.py 파일을 만들어 내용을 작성한다.
    
 ```python
@@ -60,7 +60,7 @@ from .forms import CustomUserCreationForm
 class UserCreateView(CreateView):
   form_class = CustomUserCreationForm
 ```
-6) settings.py 
+6) settings.py  
 몇 가지 옵션을 추가한다.
    
 ```python
