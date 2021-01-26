@@ -40,7 +40,7 @@ Bootstrap 에서도 a 태그를 활용한 방법을 설명하고 있다.
       path('purchase/', PurchaseView.purchase_render, name='purchase')
       
       ]
-  
+  ```
   
   
 3) 템플릿 작성
