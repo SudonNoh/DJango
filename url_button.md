@@ -1,4 +1,4 @@
-### "a href" 를 활용한 Template 이동
+# "a href" 를 활용한 Template 이동
 
 button에 onclick으로 href를 넣는 방법 등을 우선적으로 활용해보았으나,  
 알아본 결과 button 에 onclick 으로 넣어서 사용하는 것은 추천하지 않는다고 한다.  
@@ -8,8 +8,10 @@ Bootstrap 에서도 a 태그를 활용한 방법을 설명하고 있다.
 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 ```
-
-1) View 작성
+  
+  
+  
+### 1) View 작성
   ```python
   import django.views.generic import TemplateView
   import django.shortcuts import render
@@ -29,7 +31,7 @@ Bootstrap 에서도 a 태그를 활용한 방법을 설명하고 있다.
   
   
   
-2) url 작성
+### 2) url 작성
   ```python
   import .views import PurchaseView
   
@@ -43,7 +45,7 @@ Bootstrap 에서도 a 태그를 활용한 방법을 설명하고 있다.
   ```
   
   
-3) 템플릿 작성
+### 3) 템플릿 작성
 
   ```html
   <a href="{% url 'purchase' %}" class="btn-1" type="button">Purchase</a>
