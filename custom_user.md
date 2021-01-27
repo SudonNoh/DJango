@@ -48,7 +48,8 @@ from django.contrib.auth import get_user_model
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
-        models = get_user_model()
+        ~~models = get_user_model()~~
+        model = get_user_model()
         fields = UserCreationForm.Meta.fields
 ```
 5) views.py  
