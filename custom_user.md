@@ -14,6 +14,8 @@ python manage.py startapp account
 User 필드에 추가할 내용을 작성한다.
    
 ```python
+# account/models.py
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
