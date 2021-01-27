@@ -48,7 +48,9 @@ from django.contrib.auth import get_user_model
 class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
-        ~~models = get_user_model()~~
+        # 습관적으로 s를 붙여버림.... s 빼고 
+        # models = get_user_model()
+        
         model = get_user_model()
         fields = UserCreationForm.Meta.fields
 ```
