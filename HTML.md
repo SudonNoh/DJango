@@ -97,3 +97,48 @@
 ```
 <p><ins>"밑줄 친 부분"</ins>입니다.</p>
 
+```html
+<!-- 아래첨자, 위첨자 -->
+<sup></sup>
+<sub></sub>
+
+<!-- 예시 -->
+<p>X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup></p>
+<p>H<sub>2</sub>O</p>
+```
+<p>X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup></p>
+<p>H<sub>2</sub>O</p>
+
+```html
+<!-- 짧은 인용구 -->
+<q></q>
+
+<!-- 예시 -->
+<p>이 글은 <q>짧은 인용구</q>를 위한 글입니다.</p>
+```
+<p>이 글은 <q>짧은 인용구</q>를 위한 글입니다.</p>
+
+
+```html
+<!-- 블록 인용구 -->
+<blockquote></blockquote>
+
+<!-- 예시 -->
+<p>HTML 정의</p>
+<blockquote>블록 인용구 1 <br> 블록 인용구 1-1 </blockquote>
+<blockquote>블록 인용구 2 </blockquote>
+```
+
+<p>HTML 정의</p>
+<blockquote>블록 인용구 1 <br> 블록 인용구 1-1 </blockquote>
+<blockquote>블록 인용구 2 </blockquote>
+
+
+```html
+<!-- 축약형 표현 -->
+<abbr title="마우스를 올리면 나타나는 문구"></addr>
+
+<!-- 예시 -->
+<p><strong><abbr title="HyperText Markup Language 5">HTML5</abbr></strong> 정의</p>
+```
+<p><strong><abbr title="HyperText Markup Language 5">HTML5</abbr></strong> 정의</p>
