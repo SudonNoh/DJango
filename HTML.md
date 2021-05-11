@@ -141,4 +141,15 @@
 <!-- 예시 -->
 <p><strong><abbr title="HyperText Markup Language 5">HTML5</abbr></strong> 정의</p>
 ```
-<p><strong><abbr title="HyperText Markup Language 5">HTML5</abbr></strong> 정의</p>
+
+```html
+<!-- 주소 표현 (이탤릭체로 표현, 위아래 공백 자동추가)-->
+<address></address>
+
+<!-- 예시 -->
+<address>
+  대전광역시<br>
+  서구 복수서로 10
+</address>
+```
+
