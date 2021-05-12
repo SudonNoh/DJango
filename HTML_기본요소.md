@@ -196,6 +196,7 @@ _top:링크로 연결된 문서를 현재 창의 가장 상위 프레임(frame)�
 ```
 
 <h3>이미지의 테두리(border) 설정</h3>
+
 ```html
 <img src="/examples/images/img_flag.png" alt="이미지 테두리" 
      style="width:320px; height:214px; border:3px solid black"
