@@ -194,3 +194,33 @@ _top:링크로 연결된 문서를 현재 창의 가장 상위 프레임(frame)�
 <img src="/examples/images/img_flag.png" alt="html size" width="320" height="214">
 <img src="/examples/images/img_flag.png" alt="style size" style="width:320px; height:214px">
 ```
+
+<h3>이미지의 테두리(border) 설정</h3>
+```html
+<img src="/examples/images/img_flag.png" alt="이미지 테두리" 
+     style="width:320px; height:214px; border:3px solid black"
+```
+
+<h3>이미지에 링크 설정</h3>
+
+```html
+<a href="/html/into" target="_blank">
+  <img src="/examples/images/img_flag.png" alt="flag" style="width:320px; height:214:px">
+</a>
+```
+
+<h3>이미지맵 만들기</h3>
+<p>이미지 맵(image map): 이미지의 일부를 클릭할 수 있도록 만들어서 버튼처럼 사용하는 기능을 의미함<br><br>
+  &lt;img&rt;태그의 usemap 속성을 &lt;map&rt;태그의 name 속성과 연결하면 이미지와 맵 사이의 관계가 설정됨<br>
+  &lt;map&rt;태그는 하나 이상의 &lt;area&rt;태그를 가지며, 이 &lt;area&rt;태그가 바로 버튼과 같은 역할을 함</p>
+  
+```html
+<img src="/examples/images/img_flag.png" alt="진실혹은거짓" usemap="#vending" style="width:320px; height:240px" />
+<map name="vending">
+  <area shape="rect" coords="90,60,180,130" alt="거짓"
+        href="##link##">
+  <area shape="rect" coords="210,200,70,130" alt="진실"
+        href="##link##">
+</map>
+```
+
