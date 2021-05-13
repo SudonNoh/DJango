@@ -101,8 +101,8 @@
   
   <h3>iframe 요소의 페이지 변경하기</h3>
   <p>
-    &lt;a&t;태그를 이용하면 iframe 요소의 최초 페이지를 중간에 변경할 수 있음<br>
-    &lt;a&t;태그의 target 속성과 iframe 요소의 name 속성을 연결하면, <a>태그를 통해 iframe요소의 홈ㅍ에ㅣ지를 변경할 수 있음
+    &lt;a&gt;태그를 이용하면 iframe 요소의 최초 페이지를 중간에 변경할 수 있음<br>
+    &lt;a&gt;태그의 target 속성과 iframe 요소의 name 속성을 연결하면, &lt;a&gt;태그를 통해 iframe요소의 홈페이지를 변경할 수 있음
   </p>
       
   ```html
@@ -116,10 +116,41 @@
   <p>
     프레임셋(frameset)을 이용하면 하나의 브라우저 창에 둘 이상의 페이지를 표시할 수 있음<br>
     이러한 프레임셋은 iframe 요소와는 달리 하나 이상의 페이지를 동시에 가질 수 있음<br>
-    또한, noresize 속성을 명시하지 않으면, 사용자가 마음대로 페이지의 크기를 조절할 수 있음<br><br>
+    또한, <b>noresize 속성을 명시하지 않으면, 사용자가 마음대로 페이지의 크기를 조절할 수 있음</b><br><br>
     프레임셋에서 각각의 페이지는 frame 요소로 표현<br>
     frame 요소는 iframe 요소와는 달리 종료 태그를 가지지 않음<br><br>
-    noframe 요소는 해당 브라우저가 frame 요소를 지원하지 않을 때 보여지는 문자열을 저장<br><br>
-    
+    noframes 요소는 해당 브라우저가 frame 요소를 지원하지 않을 때 보여지는 문자열을 저장<br><br>
   </p>
+  <i>"frameset, frame, noframes 요소를 HTML5 표준 권고안에서 더는 지원하지 않음<br>
+  따라서 하나의 브라우저 창에 여러 페이지를 표현하고 싶을 때는 iframe 요소를 사용하거나 CSS를 이용하여 표현해야함"</i>
+  
+  <h3>수직 프레임셋</h3>
+  <p>수직 프레임셋은 하나의 브라우저 창을 세로 방향으로 분리하여 표현</p>
+  
+  ```html
+  <frameset cols="25%,*,25%">
+  <frame name="left" src="/html/intro"/>
+  <frame name="center" src="/css/intro"/>
+  <frame name="right" src="/php/intro"/>
+  <noframes>
+    <body> 이 브라우저는 frame태그를 지원하지 않습니다!</body>
+  </noframes>
+  </frameset>
+  ```
+  
+  <h3>수평 프레임셋</h3>
+  <p>수평 프레임셋은 하나의 브라우저 창을 가로 방향으로 분리하여 표현</p>
+  
+  ```html
+  <frameset rows="20%,60%,20%">
+  <frame name="top" src="/html/into" noresize="noresize" />
+  <frame name="center" src="/css/intro" noresize="noresize" />
+  <frame name="bottom" src="/php/intro" noresize="noresize" />
+  <noframes>
+    <body>
+      이 브라우저는 frame 태그를 지원하지 않습니다!
+    </body>
+  </noframes>
+  </frameset>
+  ```
 </blockquote> 
