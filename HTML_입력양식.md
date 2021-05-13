@@ -216,3 +216,78 @@
 <h2>Input 요소의 속성</h2>
 <p>input 요소의 여러 속성을 사용하면 사용자가 입력하는 방식을 더욱 다양하게 제어할 수 있음</p>
                                                        
+<blockquote>
+  <h3>value 속성</h3>
+  <p>value 속성은 input 요소의 입력 필드(input field)에 나타나는 초깃값을 설정</p>
+  
+  ```html
+  <form>
+      이름 : <br><input type="text" name="student_name"><br>
+      학번 : <br><input type="text" name="student_id"><br>
+      학과 : <br><input type="text" name="department" value="컴퓨터공학과"><br>
+  </form>
+  ```
+</blockquote>
+
+<blockquote>
+  <h3>readonly 속성</h3>
+  <p>
+    readonly 속성은 사용자가 입력 필드를 볼 수는 있으나, 수정할 수는 없도록 설정<br>
+    disabled 속성과 다른 점은 <i><b>전송 버튼(submit)을 누르면 초깃값이 서버로 전송된다는 점</b></i>
+  </p>
+  
+  ```html
+  <form>
+      이름 : <br><input type="text" name="student_name"><br>
+      학번 : <br><input type="text" name="student_id"><br>
+      학과 : <br><input type="text" name="department" value="컴퓨터공학과" readonly><br>
+  </form>
+  ```
+</blockquote>
+
+<blockquote>
+  <h3>disabled 속성</h3>
+  <p>
+    disabled 속성은 사용자가 입력 필드를 아예 사용할 수 없도록 설정<br>
+    disabled 속성이 설정된 입력 필드는 사용할 수도 없고, 클릭할 수도 없음<br>
+    또한, readonly 속성과는 달리 전송 버튼(submit)을 눌러도 초깃값이 서버로 전송되지 않음
+  </p>
+  
+  ```html
+  <form>
+      이름 : <br><input type="text" name="student_name"><br>
+      학번 : <br><input type="text" name="student_id"><br>
+      학과 : <br><input type="text" name="department" value="컴퓨터공학과" disabled><br>
+  </form>
+  ```
+</blockquote>
+
+<blockquote>
+  <h3>maxlength 속성</h3>
+  <p>maxlength 속성은 입력 필드에 입력할 수 있는 문자의 최디 길이(length)를 설정</p>
+  
+  ```html
+  <form>
+      이름 : <br><input type="text" name="student_name" value="홍길동" maxlength="10"><br>
+      학번 : <br><input type="text" name="student_id"><br>
+  </form>
+  ```
+</blockquote>
+
+</blockquote>
+
+<blockquote>
+  <h3>size 속성</h3>
+  <p>
+    size 속성은 입력 필드에 보여지는 input 요소의 크기(size)를 설정<br>
+    maxlength 속성과는 달리 입력 필드가 한 번에 보여줄 수 있는 문자의 최대 개수만을 의미
+    따라서 입력될 수 있는 문자의 최대 길이는 maxlength 속성값에 따라 달라지며, size 속성과는 전혀 무관
+  </p>
+  
+  ```html
+  <form>
+      이름 : <br><input type="text" name="student_name" value="홍길동" size="30"><br>
+      학번 : <br><input type="text" name="student_id"><br>
+  </form>
+  ```
+</blockquote>
