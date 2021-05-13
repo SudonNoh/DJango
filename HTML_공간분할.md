@@ -62,7 +62,7 @@
 </blockquote>
     
     
-
+<hr>
 <h1>iframe 요소</h1>
 <blockquote>
   <h3>iframe 요소</h3>
@@ -154,3 +154,88 @@
   </frameset>
   ```
 </blockquote> 
+
+<hr>
+<h1>HTML 레이아웃(Layout)</h1>
+<p>
+  레이아웃(Layout)이란 특정 공간에 여러 구성 요소를 보기 좋게 효과적으로 배치하는 작업<br>
+  웹 페이지의 레이아웃은 웹 사이트의 외관을 결ㄹ정짓는 매우 중요한 요소<br><br><br>
+  HTML에서는 다음과 같은 방법으로 레이아웃을 작성할 수 있음<br>
+  1. div 요소를 이용한 레이아웃
+  2. HTML5 레이아웃
+  3. table 요소를 이용한 레이아웃
+</p>
+<blockquote>
+  <h3>div 요소를 이용한 레이아웃</h3>
+  <p>div 요소는 CSS 스타일을 손쉽게 적용할 수 있으므로, 레이아웃을 작성하는데 자주 사용</P>
+  
+  ```html
+  <div id="header"><h2>Header 영역</h2></div>
+  <div id="nav"><h2>Nav 영역</h2></div>
+  ```
+  
+  <h3>HTML5 레이아웃</h3>
+  <p>
+    HTML5에서는 웹페이지의 레이아웃만을 위한 별도의 새로운 요소들을 제공<br>
+    이러한 요소들을 의미(semantic)요소라고 함
+  </p>
+  <table>
+    <tr>
+      <th>의미 요소</th>
+      <th>설명</th>
+    </tr>
+    <tr>
+      <td>&lt;header&gt;</td>
+      <td>HTML 문서나 섹션(section) 부분에 대한 헤더(header)를 정의함</td>
+    </tr>
+    <tr>
+      <td>&lt;nav&gt;</td>
+      <td>HTML 문서의 탐색 링크를 정의함</td>
+    </tr>
+    <tr>
+      <td>&lt;section&gt;</td>
+      <td>HTML 문서에서 섹션(section) 부분을 정의함</td>
+    </tr>
+    <tr>
+      <td>&lt;article&gt;</td>
+      <td>HTML 문서에서 독립적인 하나의 글(ariticle) 부분을 정의함</td>
+    </tr>
+    <tr>
+      <td>&lt;aside&gt;</td>
+      <td>HTML 문서에서 페이지 부분 이외의 콘텐츠(content)를 정의함</td>
+    </tr>
+    <tr>
+      <td>&lt;footer&gt;</td>
+      <td>HTML 문서나 섹션(section) 부분에 대한 푸터(footer)를 정의함</td>
+    </tr>
+  </table>
+  
+  ```html
+  <header><h2>Header 영역</h2></header>
+  <nav><h2>Nav 영역</h2></nav>
+  <section><p>Section 영역</p></section>
+  <footer><h2>Footer 영역</h2></footer>
+  ```
+  
+  <h3>table 요소를 이용한 레이아웃</h3>
+  <p>
+    table 요소를 이용해 레이아웃을 작성하는 방법은 오래전에 사용하던 방식으로, 현재는 거의 사용하지 않음<br>
+    table 요소는 레이아웃을 만들기 위해 설계된 요소가 아니기 때문에, 테이블로 작성된 레이아웃은 수정이 매우 어려움
+  </p>
+  
+  ```html
+  <table width="100%" style="text-align:center; border:none">
+      <tr>
+          <td colspan="2" style="background-color:lightgrey"><h2>Header 영역</h2></td>
+      </tr>
+      <tr>
+          <td style="background-color:#339999; color:white; width:20%"><h2>Nav 영역</h2></td>
+          <td style="height:200px; text-align:left"><p>Section 영역</p></td>
+      </tr>
+      <tr>
+          <td colspan="2" style="background-color:#FFCC00"><h2>Footer 영역</h2></td>
+      </tr>
+  </table>
+  ```
+  
+</blockquote>
