@@ -1,6 +1,6 @@
 <h1>Upload file</h1>
 
-<h2>1. 모델없이 업로드하는 방법</h2>
+<h2>모델없이 파일 업로드하는 방법</h2>
 <p>
   간단한 방법으로 하나의 파일을 업로드 할 때 사용한다.
   urls 파일은 간단히 view를 실행시킬 수 있을 정도만 설정해준다.
@@ -33,7 +33,12 @@
 <h3> views 전체 코드</h3>
 
 ```python
-    
+  
+from django.shortcuts import render
+from django.conf import settings
+from django.core.files.storage import FileSystemStorage
+
+
 def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
