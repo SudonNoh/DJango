@@ -30,6 +30,24 @@
 <blockquote>
   <h3>2. view</h3>
   
+<h3> views 전체 코드</h3>
+
+```python
+    
+def simple_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage(location='media/screening_ab1', base_url='media/screening_ab1')
+        FileSystemStorage.save(file_name, file_content)
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'screening_analysis/analysis_ab1_reader.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'screening_analysis/analysis_ab1_reader.html')
+```  
+  
+  
   <h4>1) myfile 에 request 받은 file을 저장</h4>
   
   ```python
@@ -48,46 +66,55 @@
         fs = FileSystemStorage(location='media/screening_ab1', base_url='media/screening_ab1')
   
   ```
-  <h4>3) 파일을 경로에 저장</h4>
   
-     <p>
-        FileSystemStorage.save(file_name, file_content)
-     </p>
+  <h4>3) 파일을 경로에 저장</h4>
+
+ <p>
+    FileSystemStorage.save(file_name, file_content)
+ </p>
      
+  
    ```python
         filename = fs.save(myfile.name, myfile)
    ```
   
   <h4>4) 파일이 저장된 URL을 반환</h4>
     
-    ```pyhton
-        uploaded_file_url = fs.url(filename)
-    ```
-    
-  <h4>5) return render
-    
-    ```python
-        
-    ```
+  
+```pyhton
+    uploaded_file_url = fs.url(filename)
+```
 
-        print('myfile read:', myfile.read()) # file 읽기
-        print('myfile size:', myfile.size) # file 읽기
-        print('myfile content_type:', myfile.content_type)
-        print('myfile open:', myfile.open())
-        myfile_read = myfile.read()
-        print('myfile read type:', type(myfile_read))
-     
+  
+<h4>5) return render</h4>
+<p>
+  uploaded_file_url 로 업로드된 파일의 local 주소를 알 수 있음</p>
 
-     
-        # Return the URL where the contents of the file referenced by name can be accessed
-        uploaded_file_url = fs.url(filename)
+```python
+    return render(request, 'screenging_analysis/analysis_ab1_reader.html',{
+        `uploaded_file_url': uploaded_file_url'
 
-        ab1_control = ab1_file_controller()
-        seq = ab1_control.ab1_seq
-        print(seq(uploaded_file_url))
+    })
+  return render(request, 'screenging_analysis/analysis_ab1_reader.html')
 
-        return render(request, 'screening_analysis/analysis_ab1_reader.html', {
-            'uploaded_file_url': uploaded_file_url
-        })
+```
+  
+      
+<h4>그 밖에 검색할 수 있는 내용</h4>  
 
-    return render(request, 'screening_analysis/analysis_ab1_reader.html')
+```python
+
+    print('myfile read:', myfile.read()) # file 읽기
+    print('myfile size:', myfile.size) # file 읽기
+    print('myfile content_type:', myfile.content_type)
+    print('myfile open:', myfile.open())
+    myfile_read = myfile.read()
+    print('myfile read type:', type(myfile_read))
+
+    from .module import ab1_file_controller
+
+    ab1_control = ab1_file_controller()
+    seq = ab1_control.ab1_seq
+    print(seq(uploaded_file_url))
+```
+</blcokquote>
