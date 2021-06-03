@@ -43,7 +43,7 @@ def simple_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage(location='media/screening_ab1', base_url='media/screening_ab1')
-        FileSystemStorage.save(file_name, file_content)
+        # FileSystemStorage.save(file_name, file_content)
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
         return render(request, 'screening_analysis/analysis_ab1_reader.html', {
