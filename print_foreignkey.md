@@ -23,7 +23,7 @@ class vendor(models.Model):
 class item(models.Model):
 
     it_id = models.AutoField('Item ID', primary_key=True)
-    ven_id = models.ForeignKey('Vendor_info', related_name='vendor_id', on_delete=models.PROTECT, db_column='ven_id')
+    ven_id = models.ForeignKey('vendor', related_name='vendor_id', on_delete=models.PROTECT, db_column='ven_id')
     order = models.BooleanField(default=True)
     
 ```
